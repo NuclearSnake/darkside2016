@@ -48,8 +48,8 @@ public class PostgreSQL_Heroku_DBManager implements DBManager{
                     + "name VARCHAR(20) NOT NULL"
                     + ")";
             stmt.executeUpdate(sql);
-            sql = "CREATE TABLE IF NOT EXISTS user_list("
-                    + "user_id SERIAL NOT NULL PRIMARY KEY,"
+            sql = "CREATE TABLE IF NOT EXISTS dear_dear_user("
+                    + "dear_user_id SERIAL NOT NULL PRIMARY KEY,"
                     + "name VARCHAR(64) NOT NULL,"
                     + "passwordHash BIT(64),"
                     + "passwordSalt BIT(64),"
@@ -58,26 +58,26 @@ public class PostgreSQL_Heroku_DBManager implements DBManager{
             stmt.executeUpdate(sql);
             sql = "CREATE TABLE IF NOT EXISTS idea("
                     + "idea_id SERIAL NOT NULL PRIMARY KEY,"
-                    + "user_id INT NOT NULL,"
-                    + "username VARCHAR(64),"
+                    + "dear_user_id INT NOT NULL,"
+                    + "dear_user_name VARCHAR(64),"
                     + "title VARCHAR(64) NOT NULL,"
                     + "link VARCHAR(256),"
                     + "text VARCHAR(1024),"
                     + "file VARBIT(20971520),"
                     + "date TIMESTAMPTZ," // Timestamp with time zone
                     + "rating INT,"
-                    + "FOREIGN KEY(user_id) REFERENCES user(user_id),"
+                    + "FOREIGN KEY(dear_user_id) REFERENCES dear_user(dear_user_id),"
                     + "CHECK (link IS NOT NULL OR text IS NOT NULL OR file IS NOT NULL)"
                     + ")";
             stmt.executeUpdate(sql);
             sql = "CREATE TABLE IF NOT EXISTS comment("
                     + "comm_id SERIAL NOT NULL PRIMARY KEY,"
-                    + "user_id int NOT NULL,"
-                    + "username VARCHAR(64),"
+                    + "dear_user_id int NOT NULL,"
+                    + "dear_user_name VARCHAR(64),"
                     + "idea_id int NOT NULL,"
                     + "text VARCHAR(1024),"
                     + "date TIMESTAMP,"
-                    + "FOREIGN KEY(user_id) REFERENCES user(user_id),"
+                    + "FOREIGN KEY(dear_user_id) REFERENCES dear_user(dear_user_id),"
                     + "FOREIGN KEY(idea_id) REFERENCES idea(idea_id)"
                     + ")";
             stmt.executeUpdate(sql);
@@ -89,19 +89,19 @@ public class PostgreSQL_Heroku_DBManager implements DBManager{
                     + ")";
             stmt.executeUpdate(sql);
             sql = "CREATE TABLE IF NOT EXISTS vote("
-                    + "user_id int NOT NULL,"
+                    + "dear_user_id int NOT NULL,"
                     + "idea_id int NOT NULL,"
                     + "liked BOOLEAN NOT NULL DEFAULT 1,"
-                    + "PRIMARY KEY(user_id, idea_id),"
-                    + "FOREIGN KEY(user_id) REFERENCES user(user_id),"
+                    + "PRIMARY KEY(dear_user_id, idea_id),"
+                    + "FOREIGN KEY(dear_user_id) REFERENCES dear_user(dear_user_id),"
                     + "FOREIGN KEY(idea_id) REFERENCES idea(idea_id)"
                     + ")";
             stmt.executeUpdate(sql);
             sql = "CREATE TABLE IF NOT EXISTS admin("
                     + "admin_id SERIAL NOT NULL PRIMARY KEY,"
-                    + "user_id int NOT NULL,"
+                    + "dear_user_id int NOT NULL,"
                     + "admin_since TIMESTAMPTZ," // Timestamp with time zone
-                    + "FOREIGN KEY(user_id) REFERENCES user(user_id)"
+                    + "FOREIGN KEY(dear_user_id) REFERENCES dear_user(dear_user_id)"
                     + ")";
             stmt.executeUpdate(sql);
         }catch(SQLException se){
@@ -143,7 +143,7 @@ public class PostgreSQL_Heroku_DBManager implements DBManager{
             stmt = conn.createStatement();
             String sql;
 
-            sql = "SELECT title, text, username from idea";
+            sql = "SELECT title, text, dear_user_name from idea";
             //stmt.executeUpdate(sql);
 
             //sql = "SELECT id, first FROM delete_me";
@@ -230,7 +230,7 @@ public class PostgreSQL_Heroku_DBManager implements DBManager{
         try {
             ResultSet rs = query("SELECT * FROM comment WHERE comm_id="+id);
             if(rs.next()){ // Get first only
-                ce = new CommentExtended(rs.getInt("comm_id"), rs.getInt("user_id"), rs.getInt("idea_id"), rs.getString("username"));
+                ce = new CommentExtended(rs.getInt("comm_id"), rs.getInt("dear_user_id"), rs.getInt("idea_id"), rs.getString("dear_user_name"));
                 ce.setText(rs.getString("text"));
                 ce.setTimestamp(rs.getTimestamp("date"));
                 //Display values
@@ -247,7 +247,7 @@ public class PostgreSQL_Heroku_DBManager implements DBManager{
         try {
             ResultSet rs = query("SELECT * FROM comment WHERE comm_id="+id);
             if(rs.next()){ // Get first only
-                ie = new IdeaExtended(rs.getInt("idea_id"), rs.getInt("user_id"), rs.getString("username"));
+                ie = new IdeaExtended(rs.getInt("idea_id"), rs.getInt("dear_user_id"), rs.getString("dear_user_name"));
                 ie.setTimestamp(rs.getTimestamp("date"));
 
                 ie.setText(rs.getString("text"));
@@ -271,7 +271,7 @@ public class PostgreSQL_Heroku_DBManager implements DBManager{
             conn = DriverManager.getConnection(DB_URL);
             stmt = conn.createStatement();
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            res = stmt.executeUpdate("INSERT INTO comment(user_id,idea_id,text) VALUES("+c.getUser_id()+","+c.getIdea_id()+","+timestamp+")");
+            res = stmt.executeUpdate("INSERT INTO comment(dear_user_id,idea_id,text) VALUES("+c.getUser_id()+","+c.getIdea_id()+","+timestamp+")");
             stmt.close();
             conn.close();
         }catch(SQLException se){
@@ -298,12 +298,12 @@ public class PostgreSQL_Heroku_DBManager implements DBManager{
         return res;
 //              sql = "CREATE TABLE comment("
 //              + "comm_id SERIAL NOT NULL PRIMARY KEY,"
-//              + "user_id int NOT NULL,"
-//              + "username VARCHAR(64),"
+//              + "dear_user_id int NOT NULL,"
+//              + "dear_user_name VARCHAR(64),"
 //              + "idea_id int NOT NULL,"
 //              + "text VARCHAR(1024),"
 //              + "date TIMESTAMP,"
-//              + "FOREIGN KEY(user_id) REFERENCES user(user_id),"
+//              + "FOREIGN KEY(dear_user_id) REFERENCES dear_user(dear_user_id),"
 //              + "FOREIGN KEY(idea_id) REFERENCES idea(idea_id)"
 //              + ") IF NOT EXISTS";
     }
