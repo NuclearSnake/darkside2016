@@ -91,7 +91,7 @@ public class PostgreSQL_Heroku_DBManager implements DBManager{
             sql = "CREATE TABLE IF NOT EXISTS vote("
                     + "dear_user_id int NOT NULL,"
                     + "idea_id int NOT NULL,"
-                    + "liked BOOLEAN NOT NULL DEFAULT 1,"
+                    + "liked BOOLEAN NOT NULL DEFAULT true,"
                     + "PRIMARY KEY(dear_user_id, idea_id),"
                     + "FOREIGN KEY(dear_user_id) REFERENCES dear_user(dear_user_id),"
                     + "FOREIGN KEY(idea_id) REFERENCES idea(idea_id)"
