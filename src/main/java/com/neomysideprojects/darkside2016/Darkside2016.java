@@ -6,6 +6,11 @@ package com.neomysideprojects.darkside2016;/*
 
 //import javax.servlet.http.HttpSessionId
 
+import java.net.URISyntaxException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 /**
  *
  * @author Neo
@@ -33,8 +38,6 @@ public class Darkside2016 {
 
         System.out.println("Time is over. C u nxt tim!");
         System.exit(0);
-
     }
-
 
 }
