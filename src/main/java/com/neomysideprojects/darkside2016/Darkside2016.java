@@ -11,7 +11,7 @@ package com.neomysideprojects.darkside2016;/*
  * @author Neo
  */
 public class Darkside2016 {
-    public static final int IDLE_TIME = 1000*60*30; // 30 mins
+    public static final int IDLE_TIME = 1000*60*60*24*10; // 10 days
 
     /**
      * @param args the command line arguments
