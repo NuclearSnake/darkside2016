@@ -48,7 +48,7 @@ public class PostgreSQL_Heroku_DBManager implements DBManager{
                     + "name VARCHAR(20) NOT NULL"
                     + ")";
             stmt.executeUpdate(sql);
-            sql = "CREATE TABLE IF NOT EXISTS user("
+            sql = "CREATE TABLE IF NOT EXISTS user_list("
                     + "user_id SERIAL NOT NULL PRIMARY KEY,"
                     + "name VARCHAR(64) NOT NULL,"
                     + "passwordHash BIT(64),"
