@@ -22,6 +22,8 @@ public class Darkside2016 {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception{
+        DataManager manager = new DataManager(new PostgreSQL_Heroku_DBManager(), new JacksonManager());
+
         HttpProcessor httpProcessor = new HttpProcessor();
         HttpProcessor.main(null);
 
