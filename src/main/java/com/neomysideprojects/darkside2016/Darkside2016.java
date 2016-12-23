@@ -22,8 +22,8 @@ import java.io.PrintWriter;
  */
 public class Darkside2016 extends HttpServlet {
     public static final int IDLE_TIME = 1000*60*30; // 30 mins
-    //private static final int PORT = Integer.parseInt(System.getenv("PORT"));
-    private static final int PORT = 80;
+    private static final int PORT = Integer.parseInt(System.getenv("PORT"));
+    //private static final int PORT = 80;
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
