@@ -15,8 +15,8 @@ import java.io.PrintWriter;
  * Created by Neo on 23.12.2016.
  */
 public class HttpProcessor extends HttpServlet {
-    //private static final int PORT = Integer.parseInt(System.getenv("PORT"));
-    private static final int PORT = 80;
+    private static final int PORT = Integer.parseInt(System.getenv("PORT"));
+    //private static final int PORT = 80;
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
