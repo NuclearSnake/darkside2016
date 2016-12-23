@@ -1,0 +1,1 @@
+web: java -cp target\classes:target\dependency\* com.neomysideprojects.darkside2016.Darkside2016
