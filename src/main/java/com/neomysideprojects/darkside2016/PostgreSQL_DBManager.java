@@ -47,7 +47,7 @@ public class PostgreSQL_DBManager implements DBManager{
                     + ")";
             stmt.executeUpdate(sql);
             sql = "CREATE TABLE IF NOT EXISTS user("
-                    + "user_id INT NOT NULL SERIAL PRIMARY KEY,"
+                    + "user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,"
                     + "name VARCHAR(64) NOT NULL,"
                     + "passwordHash BIT(64),"
                     + "passwordSalt BIT(64),"
@@ -55,7 +55,7 @@ public class PostgreSQL_DBManager implements DBManager{
                     + ")";
             stmt.executeUpdate(sql);
             sql = "CREATE TABLE IF NOT EXISTS idea("
-                    + "idea_id INT NOT NULL SERIAL PRIMARY KEY,"
+                    + "idea_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,"
                     + "user_id INT NOT NULL,"
                     + "username VARCHAR(64),"
                     + "title VARCHAR(64) NOT NULL,"
@@ -69,7 +69,7 @@ public class PostgreSQL_DBManager implements DBManager{
                     + ")";
             stmt.executeUpdate(sql);
             sql = "CREATE TABLE IF NOT EXISTS comment("
-                    + "comm_id int NOT NULL SERIAL PRIMARY KEY,"
+                    + "comm_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,"
                     + "user_id int NOT NULL,"
                     + "username VARCHAR(64),"
                     + "idea_id int NOT NULL,"
@@ -96,7 +96,7 @@ public class PostgreSQL_DBManager implements DBManager{
                     + ")";
             stmt.executeUpdate(sql);
             sql = "CREATE TABLE IF NOT EXISTS admin("
-                    + "admin_id int NOT NULL SERIAL PRIMARY KEY,"
+                    + "admin_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,"
                     + "user_id int NOT NULL,"
                     + "admin_since TIMESTAMPTZ," // Timestamp with time zone
                     + "FOREIGN KEY(user_id) REFERENCES user(user_id)"
@@ -297,7 +297,7 @@ public class PostgreSQL_DBManager implements DBManager{
         //System.out.println("Goodbye!");
         return res;
 //              sql = "CREATE TABLE comment("
-//              + "comm_id int NOT NULL SERIAL PRIMARY KEY,"
+//              + "comm_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,"
 //              + "user_id int NOT NULL,"
 //              + "username VARCHAR(64),"
 //              + "idea_id int NOT NULL,"
