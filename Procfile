@@ -1,1 +1,1 @@
-web: java -cp target/classes:target/dependency/* -jar app.jar
+web: java -cp target/classes:target/dependency/* -jar Darkside2016-1.0-SNAPSHOT.jar
