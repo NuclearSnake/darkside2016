@@ -40,8 +40,7 @@ public class HttpProcessor extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        if(req.getRequestURI().equals("user")){
+        if(req.getRequestURI().equals("/user")){
             resp.setContentType("application/json;charset=utf-8");
             PrintWriter pw = resp.getWriter();
             // TODO Check if parameter really is of integer type
@@ -65,10 +64,10 @@ public class HttpProcessor extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
-        if(req.getRequestURI().equals("user")){
+        if(req.getRequestURI().equals("/user")){
             System.out.println("Received query: "+req.toString());
             resp.setContentType("text/html;charset=utf-8");
-            int result = manager.writeUser( manager.extractUser(req.getParameter("para")) );
+            int result = manager.writeUser( manager.extractUser(req.getParameter("user")) );
             PrintWriter pw = resp.getWriter();
             pw.println("<p>"+result+"th user was added to the database</p>");
             System.out.println(result+"th user was added to the database");

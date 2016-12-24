@@ -11,9 +11,16 @@ public class User {
     protected Timestamp registrationDate = null;
     protected int rating;
 
+    public User(){
+        this("");
+    }
+
+    public User(String name) {
+        this(-1, name);
+    }
+
     public User(int user_id, String name) {
-        this.user_id = user_id;
-        this.name = name;
+        this(user_id, name, null);
     }
 
     public User(int user_id, String name, Timestamp registrationDate) {
