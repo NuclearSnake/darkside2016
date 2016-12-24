@@ -371,12 +371,12 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
             stmt = conn.createStatement();
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
             if(u.getUser_id() != -1) {
-                System.out.println("INSERT INTO dear_user(dear_user_id, name) VALUES(" + u.getUser_id() + "," + u.getName() + ")");
-                res = stmt.executeUpdate("INSERT INTO dear_user(dear_user_id, name) VALUES(" + u.getUser_id() + "," + u.getName() + ")");
+                System.out.println("INSERT INTO dear_user(dear_user_id, name) VALUES('" + u.getUser_id() + "','" + u.getName() + "')");
+                res = stmt.executeUpdate("INSERT INTO dear_user(dear_user_id, name) VALUES('" + u.getUser_id() + "','" + u.getName() + "')");
             }
             else
-                System.out.println("INSERT INTO dear_user(name) VALUES("+u.getName()+")");
-                res = stmt.executeUpdate("INSERT INTO dear_user(name) VALUES("+u.getName()+")");
+                System.out.println("INSERT INTO dear_user(name) VALUES('"+u.getName()+"')");
+                res = stmt.executeUpdate("INSERT INTO dear_user(name) VALUES('"+u.getName()+"')");
             stmt.close();
             conn.close();
         }catch(SQLException se){
