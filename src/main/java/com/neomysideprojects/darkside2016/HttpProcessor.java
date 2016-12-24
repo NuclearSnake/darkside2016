@@ -1,8 +1,11 @@
 package com.neomysideprojects.darkside2016;
 
+import com.neomysideprojects.darkside2016.interfaces.DBManager;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,13 +19,42 @@ import java.io.PrintWriter;
  */
 public class HttpProcessor extends HttpServlet {
     private static final int PORT = Integer.parseInt(System.getenv("PORT"));
+    private static DataManager manager = null;
     //private static final int PORT = 80;
+
+    public static void setup(DataManager manager){
+        HttpProcessor.manager = manager;
+
+        Server server = new Server(PORT);
+        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+        context.setContextPath("/");
+        server.setHandler(context);
+        context.addServlet(new ServletHolder(new HttpProcessor()), "/*");
+        try {
+            server.start();
+            server.join();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=utf-8");
 
+        if(req.getRequestURI().equals("user")){
+            resp.setContentType("application/json;charset=utf-8");
+            PrintWriter pw = resp.getWriter();
+            // TODO Check if parameter really is of integer type
+            // TODO Check output of database read operation
+            pw.print( manager.insertUser(manager.readUser( Integer.parseInt(req.getParameter("id")) )) );
+            pw.flush();
+            pw.close();
+            return;
+        }
+
+        resp.setContentType("text/html;charset=utf-8");
         PrintWriter pw = resp.getWriter();
+
         pw.println("<H1>Hello, world! или: Привет мир!!</H1>");
         System.out.println("Input request\nMethod: "+req.getMethod()+"\nAuth type:"+req.getAuthType()+"\nQuery: "+req.getQueryString()+"\nRequest URI: "+req.getRequestURI());
 
@@ -30,23 +62,19 @@ public class HttpProcessor extends HttpServlet {
         pw.close();
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) throws Exception{
-        //DataManager manager = new DataManager(new MySQL_DBManager(), new JacksonManager());
-        //MySQL_DBManager bManager = new MySQL_DBManager();
-        //MySQL_DBManager.main(null);
-
-        Server server = new Server(PORT);
-        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        context.setContextPath("/");
-        server.setHandler(context);
-        context.addServlet(new ServletHolder(new HttpProcessor()), "/*");
-        server.start();
-        server.join();
-
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html;charset=utf-8");
+        if(req.getRequestURI().equals("user")){
+            System.out.println("Received query: "+req.toString());
+            resp.setContentType("text/html;charset=utf-8");
+            int result = manager.writeUser( manager.extractUser(req.getParameter("para")) );
+            PrintWriter pw = resp.getWriter();
+            pw.println("<p>"+result+"th user was added to the database</p>");
+            System.out.println(result+"th user was added to the database");
+        }
+        System.out.println("Input request\nMethod: "+req.getMethod()+"\nAuth type:"+req.getAuthType()+"\nQuery: "+req.getQueryString()+"\nRequest URI: "+req.getRequestURI());
+        //super.doPost(req, resp);
     }
-
 
 }

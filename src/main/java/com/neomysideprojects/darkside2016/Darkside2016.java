@@ -6,10 +6,8 @@ package com.neomysideprojects.darkside2016;/*
 
 //import javax.servlet.http.HttpSessionId
 
-import java.net.URISyntaxException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import com.neomysideprojects.darkside2016.managers.JacksonManager;
+import com.neomysideprojects.darkside2016.managers.PostgreSQL_Heroku_DBManager;
 
 /**
  *
@@ -24,8 +22,9 @@ public class Darkside2016 {
     public static void main(String[] args) throws Exception{
         DataManager manager = new DataManager(new PostgreSQL_Heroku_DBManager(), new JacksonManager());
 
+
         HttpProcessor httpProcessor = new HttpProcessor();
-        HttpProcessor.main(null);
+        HttpProcessor.setup(manager);
 
         long startTime = System.currentTimeMillis();
 
