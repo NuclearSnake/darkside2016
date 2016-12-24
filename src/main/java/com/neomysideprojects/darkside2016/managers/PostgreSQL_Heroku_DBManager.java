@@ -347,8 +347,13 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
 
     public UserFull readUserFull(int user_id) {
         UserFull uf = null;
-        try {
-            ResultSet rs = query("SELECT * FROM dear_user WHERE dear_user_id="+user_id);
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs;
+        try{
+            conn = DriverManager.getConnection(DB_URL);
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery("SELECT * FROM dear_user WHERE dear_user_id="+user_id);
             if(rs.next()){ // Get first only
                 uf = new UserFull(rs.getInt("dear_user_id"), rs.getString("name"), rs.getBytes("passwordHash"), rs.getBytes("passwordSalt"));
                 uf.setRating(rs.getInt("rating"));
@@ -356,9 +361,30 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
                 //Display values
                 System.out.print(uf.toString());
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(MySQL_DBManager.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            stmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(stmt!=null)
+                    stmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn!=null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        //System.out.println("Goodbye!");
+
         return uf;
     }
 

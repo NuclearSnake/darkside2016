@@ -18,9 +18,8 @@ import java.io.PrintWriter;
  * Created by Neo on 23.12.2016.
  */
 public class HttpProcessor extends HttpServlet {
-    private static final int PORT = Integer.parseInt(System.getenv("PORT"));
     private static DataManager manager = null;
-    //private static final int PORT = 80;
+    private static final int PORT = Darkside2016.RELEASE?Integer.parseInt(System.getenv("PORT")):80;
 
     public static void setup(DataManager manager){
         HttpProcessor.manager = manager;

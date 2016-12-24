@@ -1,9 +1,6 @@
 package com.neomysideprojects.darkside2016.managers;
 
-import com.neomysideprojects.darkside2016.data.Comment;
-import com.neomysideprojects.darkside2016.data.CommentExtended;
-import com.neomysideprojects.darkside2016.data.Idea;
-import com.neomysideprojects.darkside2016.data.IdeaExtended;
+import com.neomysideprojects.darkside2016.data.*;
 import com.neomysideprojects.darkside2016.interfaces.DBManager;
 
 import java.sql.*;
@@ -14,7 +11,7 @@ import java.util.logging.Logger;
  *
  * @author Neo
  */
-public abstract class MySQL_DBManager implements DBManager {
+public class MySQL_DBManager implements DBManager {
       
    // JDBC driver name and database URL
    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
@@ -314,8 +311,157 @@ public abstract class MySQL_DBManager implements DBManager {
 //              + ") IF NOT EXISTS";      
     }
 
+    public int updateComment(Comment c) {
+        return 0;
+    }
+
+    public boolean readVote(int user_id, int idea_id) {
+        return false;
+    }
+
+    public int writeVote(Vote v) {
+        return 0;
+    }
+
+    public int updateVote(Vote v) {
+        return 0;
+    }
+
+    public User readUser(int user_id) {
+        UserFull uf = readUserFull(user_id);
+        User u = new User(uf.getUser_id(), uf.getName(), uf.getRegistrationDate());
+        u.setRating(uf.getRating());
+        return u;
+    }
+
+    public UserFull readUserFull(int user_id) {
+        UserFull uf = null;
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        try{
+            Class.forName(JDBC_DRIVER);
+            conn = DriverManager.getConnection(DB_URL+DB_NAME,USER,PASS);
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery("SELECT * FROM user WHERE user_id="+user_id);
+            if(rs.next()) { // Get first only
+                uf = new UserFull(rs.getInt("user_id"), rs.getString("name"), rs.getBytes("passwordHash"), rs.getBytes("passwordSalt"));
+                uf.setRating(rs.getInt("rating"));
+
+                //Display values
+                System.out.print(uf.toString());
+            }
+            stmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(stmt!=null)
+                    stmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn!=null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+
+        return uf;
+    }
+
+    public int writeUser(User u) {
+        Connection conn = null;
+        Statement stmt = null;
+        int res = -1;
+        try{
+            conn = DriverManager.getConnection(DB_URL+DB_NAME,USER,PASS);
+            stmt = conn.createStatement();
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            if(u.getUser_id() != -1) {
+                System.out.println("INSERT INTO user(user_id, name) VALUES('" + u.getUser_id() + "','" + u.getName() + "')");
+                res = stmt.executeUpdate("INSERT INTO user(user_id, name) VALUES('" + u.getUser_id() + "','" + u.getName() + "')");
+            }
+            else
+                System.out.println("INSERT INTO user(name) VALUES('"+u.getName()+"')");
+            res = stmt.executeUpdate("INSERT INTO user(name) VALUES('"+u.getName()+"')");
+            stmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(stmt!=null)
+                    stmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn!=null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        //System.out.println("Goodbye!");
+        return res;
+//              sql = "CREATE TABLE comment("
+//              + "comm_id SERIAL NOT NULL PRIMARY KEY,"
+//              + "dear_user_id int NOT NULL,"
+//              + "dear_user_name VARCHAR(64),"
+//              + "idea_id int NOT NULL,"
+//              + "text VARCHAR(1024),"
+//              + "date TIMESTAMP,"
+//              + "FOREIGN KEY(dear_user_id) REFERENCES dear_user(dear_user_id),"
+//              + "FOREIGN KEY(idea_id) REFERENCES idea(idea_id)"
+//              + ") IF NOT EXISTS";
+
+    }
+    public int writeUser(UserFull u) {
+        return 0;
+    }
+
+    public int updateUser(User u) {
+        return 0;
+    }
+
+    public int updateUser(UserFull u) {
+        return 0;
+    }
+
+    public Tag readTag(int tag_id) {
+        return null;
+    }
+
+    public int writeTag(Tag tag) {
+        return 0;
+    }
+
+    public int updateTag(Tag tag) {
+        return 0;
+    }
+
+    public boolean checkAdmin(int user_id) {
+        return false;
+    }
+
     public int writeIdea(Idea i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public int updateIdea(Idea i) {
+        return 0;
     }
 
     public int updateComment(Comment c, int id) {
