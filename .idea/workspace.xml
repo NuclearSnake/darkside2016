@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="399c779d-33f0-4995-9828-b52ed2275b0b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/data/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/data/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,7 +19,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
@@ -44,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostgreSQL_Heroku_DBManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PostgreSQL_Heroku_DBManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+            <state relative-caret-position="408">
+              <caret line="377" column="88" lean-forward="false" selection-start-line="377" selection-start-column="88" selection-end-line="377" selection-end-column="88" />
               <folding>
                 <element signature="docComment;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="e#360#449#0" expanded="false" />
@@ -64,8 +63,8 @@
                 <element signature="method#readVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#writeVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#updateVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-                <element signature="e#15165#15210#0" expanded="false" />
-                <marker date="1482619551903" expanded="false" signature="169:252" ph="..." />
+                <element signature="e#15412#15457#0" expanded="false" />
+                <marker date="1482619786349" expanded="false" signature="169:252" ph="..." />
               </folding>
             </state>
           </provider>
@@ -901,8 +900,8 @@
             <element signature="method#readVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#writeVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#updateVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#15165#15210#0" expanded="false" />
-            <marker date="1482619551903" expanded="false" signature="169:252" ph="..." />
+            <element signature="e#15412#15457#0" expanded="false" />
+            <marker date="1482619786349" expanded="false" signature="169:252" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1276,31 +1275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-          <folding>
-            <element signature="docComment;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#360#449#0" expanded="false" />
-            <element signature="e#1007#1075#0" expanded="false" />
-            <element signature="method#main#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#6103#6129#0" expanded="false" />
-            <element signature="method#query#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="method#readComment#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="method#readIdea#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="method#writeComment#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#11259#11304#0" expanded="false" />
-            <element signature="method#writeIdea#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="method#readVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="method#writeVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="method#updateVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#15165#15210#0" expanded="false" />
-            <marker date="1482619551903" expanded="false" signature="169:252" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-588">
@@ -1317,6 +1291,31 @@
           <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
             <element signature="e#1791#1792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="377" column="88" lean-forward="false" selection-start-line="377" selection-start-column="88" selection-end-line="377" selection-end-column="88" />
+          <folding>
+            <element signature="docComment;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="e#360#449#0" expanded="false" />
+            <element signature="e#1007#1075#0" expanded="false" />
+            <element signature="method#main#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="e#6103#6129#0" expanded="false" />
+            <element signature="method#query#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="method#readComment#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="method#readIdea#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="method#writeComment#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="e#11259#11304#0" expanded="false" />
+            <element signature="method#writeIdea#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="method#readVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="method#writeVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="method#updateVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="e#15412#15457#0" expanded="false" />
+            <marker date="1482619786349" expanded="false" signature="169:252" ph="..." />
           </folding>
         </state>
       </provider>

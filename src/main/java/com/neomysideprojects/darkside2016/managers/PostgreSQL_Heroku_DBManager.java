@@ -370,9 +370,12 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
             conn = DriverManager.getConnection(DB_URL);
             stmt = conn.createStatement();
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            if(u.getUser_id() != -1)
-                res = stmt.executeUpdate("INSERT INTO dear_user(dear_user_id, name) VALUES("+u.getUser_id()+","+u.getName()+")");
+            if(u.getUser_id() != -1) {
+                System.out.println("INSERT INTO dear_user(dear_user_id, name) VALUES(" + u.getUser_id() + "," + u.getName() + ")");
+                res = stmt.executeUpdate("INSERT INTO dear_user(dear_user_id, name) VALUES(" + u.getUser_id() + "," + u.getName() + ")");
+            }
             else
+                System.out.println("INSERT INTO dear_user(name) VALUES("+u.getName()+")");
                 res = stmt.executeUpdate("INSERT INTO dear_user(name) VALUES("+u.getName()+")");
             stmt.close();
             conn.close();
