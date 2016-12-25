@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="399c779d-33f0-4995-9828-b52ed2275b0b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/neomysideprojects/darkside2016/Darkside2016.class" afterPath="$PROJECT_DIR$/target/classes/com/neomysideprojects/darkside2016/Darkside2016.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/neomysideprojects/darkside2016/HttpProcessor.class" afterPath="$PROJECT_DIR$/target/classes/com/neomysideprojects/darkside2016/HttpProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.class" afterPath="$PROJECT_DIR$/target/classes/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.class" afterPath="$PROJECT_DIR$/target/classes/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Passwords.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/interfaces/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/interfaces/DBManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java" />
     </list>
@@ -30,35 +28,44 @@
       <file leaf-file-name="DataManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+            <state relative-caret-position="237">
+              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
-                <element signature="e#1560#1561#0" expanded="true" />
-                <element signature="e#1609#1610#0" expanded="true" />
-                <element signature="e#1747#1748#0" expanded="true" />
-                <element signature="e#1791#1792#0" expanded="true" />
+                <element signature="e#1996#1997#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Darkside2016.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Darkside2016.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="223">
+              <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpProcessor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HttpProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="141">
+              <caret line="46" column="105" lean-forward="true" selection-start-line="46" selection-start-column="105" selection-end-line="46" selection-end-column="105" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Request.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/9.4.0.M1/jetty-server-9.4.0.M1-sources.jar!/org/eclipse/jetty/server/Request.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="994" column="0" lean-forward="false" selection-start-line="994" selection-start-column="0" selection-end-line="994" selection-end-column="0" />
+              <folding>
+                <element signature="e#35734#35735#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,25 +74,73 @@
       <file leaf-file-name="PostgreSQL_Heroku_DBManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3213">
-              <caret line="351" column="20" lean-forward="false" selection-start-line="351" selection-start-column="20" selection-end-line="351" selection-end-column="20" />
+            <state relative-caret-position="116">
+              <caret line="354" column="55" lean-forward="true" selection-start-line="354" selection-start-column="55" selection-end-line="354" selection-end-column="55" />
               <folding>
                 <element signature="docComment;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-                <element signature="e#360#449#0" expanded="false" />
-                <element signature="e#1007#1075#0" expanded="false" />
+                <element signature="e#413#502#0" expanded="false" />
+                <element signature="e#1060#1128#0" expanded="false" />
+                <element signature="initializer##0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#main#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-                <element signature="e#6103#6129#0" expanded="false" />
+                <element signature="e#6156#6182#0" expanded="false" />
+                <element signature="method#query#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#readComment#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#readIdea#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#writeComment#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-                <element signature="e#11259#11304#0" expanded="false" />
+                <element signature="e#11312#11357#0" expanded="false" />
                 <element signature="method#writeIdea#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#readVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#writeVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#updateVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-                <element signature="e#16210#16255#0" expanded="false" />
-                <marker date="1482622689486" expanded="false" signature="169:252" ph="..." />
+                <element signature="method#writeUser#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+                <element signature="e#17990#18035#0" expanded="false" />
+                <marker date="1482696565205" expanded="false" signature="222:305" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySQL_DBManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="455" column="44" lean-forward="true" selection-start-line="455" selection-start-column="44" selection-end-line="455" selection-end-column="44" />
+              <folding>
+                <element signature="docComment;class#MySQL_DBManager#0" expanded="false" />
+                <element signature="method#main#0;class#MySQL_DBManager#0" expanded="false" />
+                <element signature="e#5586#5612#0" expanded="false" />
+                <element signature="method#InitializeDB#0;class#MySQL_DBManager#0" expanded="false" />
+                <element signature="method#readComment#0;class#MySQL_DBManager#0" expanded="false" />
+                <element signature="method#readIdea#0;class#MySQL_DBManager#0" expanded="false" />
+                <element signature="method#writeComment#0;class#MySQL_DBManager#0" expanded="false" />
+                <element signature="e#10653#10698#0" expanded="false" />
+                <element signature="e#14719#14764#0" expanded="false" />
+                <element signature="method#writeIdea#0;class#MySQL_DBManager#0" expanded="false" />
+                <element signature="method#updateComment#1;class#MySQL_DBManager#0" expanded="false" />
+                <element signature="method#updateIdea#1;class#MySQL_DBManager#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Passwords.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Passwords.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="59" column="84" lean-forward="true" selection-start-line="59" selection-start-column="84" selection-end-line="59" selection-end-column="84" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/interfaces/DBManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,17 +208,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/Dummy_DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/data/UserFull.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/interfaces/DBManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/interfaces/InternetManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/JacksonManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/Dummy_InternetManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/data/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Pass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/interfaces/DBManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Passwords.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java" />
       </list>
     </option>
   </component>
@@ -241,92 +298,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Darkside2016_maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Darkside2016_maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Darkside2016_maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Darkside2016_maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Darkside2016_maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Darkside2016_maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Darkside2016_maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Darkside2016_maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Darkside2016_maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Darkside2016_maven" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="darkside2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -426,6 +397,92 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Darkside2016_maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Darkside2016_maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Darkside2016_maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Darkside2016_maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Darkside2016_maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Darkside2016_maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Darkside2016_maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Darkside2016_maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Darkside2016_maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Darkside2016_maven" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="darkside2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -718,12 +775,21 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -732,24 +798,24 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26332623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -782,7 +848,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java</url>
-          <line>391</line>
+          <line>437</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -793,12 +859,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java</url>
-          <line>381</line>
+          <line>382</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java</url>
+          <line>392</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java</url>
+          <line>436</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java</url>
+          <line>457</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -807,14 +891,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -828,8 +904,7 @@
         <state relative-caret-position="901">
           <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
-            <element signature="e#1474#1475#0" expanded="true" />
-            <element signature="e#1519#1520#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -848,20 +923,23 @@
           <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
           <folding>
             <element signature="docComment;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#360#449#0" expanded="false" />
-            <element signature="e#1007#1075#0" expanded="false" />
+            <element signature="e#413#502#0" expanded="false" />
+            <element signature="e#1060#1128#0" expanded="false" />
+            <element signature="initializer##0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#main#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#6103#6129#0" expanded="false" />
+            <element signature="e#6156#6182#0" expanded="false" />
+            <element signature="method#query#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#readComment#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#readIdea#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#writeComment#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#11259#11304#0" expanded="false" />
+            <element signature="e#11312#11357#0" expanded="false" />
             <element signature="method#writeIdea#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#readVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#writeVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#updateVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#16210#16255#0" expanded="false" />
-            <marker date="1482622689486" expanded="false" signature="169:252" ph="..." />
+            <element signature="method#writeUser#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="e#17990#18035#0" expanded="false" />
+            <marker date="1482696565205" expanded="false" signature="222:305" ph="..." />
           </folding>
         </state>
       </provider>
@@ -920,8 +998,7 @@
         <state relative-caret-position="136">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
-            <element signature="e#1474#1475#0" expanded="true" />
-            <element signature="e#1519#1520#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1106,14 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/interfaces/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/data/UserFull.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1126,14 +1195,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -1182,30 +1243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="1105" column="0" lean-forward="false" selection-start-line="1105" selection-start-column="0" selection-end-line="1105" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/9.4.0.M1/jetty-server-9.4.0.M1-sources.jar!/org/eclipse/jetty/server/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="994" column="0" lean-forward="false" selection-start-line="994" selection-start-column="0" selection-end-line="994" selection-end-column="0" />
-          <folding>
-            <element signature="e#35734#35735#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-          <folding>
-            <element signature="e#1560#1561#0" expanded="true" />
-            <element signature="e#1609#1610#0" expanded="true" />
-            <element signature="e#1747#1748#0" expanded="true" />
-            <element signature="e#1791#1792#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1213,28 +1250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="234" column="0" lean-forward="false" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="338" column="0" lean-forward="false" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#MySQL_DBManager#0" expanded="false" />
-            <element signature="method#main#0;class#MySQL_DBManager#0" expanded="false" />
-            <element signature="e#5533#5559#0" expanded="false" />
-            <element signature="method#InitializeDB#0;class#MySQL_DBManager#0" expanded="false" />
-            <element signature="method#readComment#0;class#MySQL_DBManager#0" expanded="false" />
-            <element signature="method#readIdea#0;class#MySQL_DBManager#0" expanded="false" />
-            <element signature="method#writeComment#0;class#MySQL_DBManager#0" expanded="false" />
-            <element signature="e#10600#10645#0" expanded="false" />
-            <element signature="e#14666#14711#0" expanded="false" />
-            <element signature="method#writeIdea#0;class#MySQL_DBManager#0" expanded="false" />
-            <element signature="method#updateComment#1;class#MySQL_DBManager#0" expanded="false" />
-            <element signature="method#updateIdea#1;class#MySQL_DBManager#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1251,55 +1266,125 @@
         <state relative-caret-position="527">
           <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding>
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="false" />
+            <element signature="e#315#316#0" expanded="false" />
+            <element signature="e#347#348#0" expanded="false" />
+            <element signature="e#377#378#0" expanded="false" />
+            <element signature="e#422#423#0" expanded="false" />
+            <element signature="e#463#464#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/interfaces/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/9.4.0.M1/jetty-server-9.4.0.M1-sources.jar!/org/eclipse/jetty/server/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="994" column="0" lean-forward="false" selection-start-line="994" selection-start-column="0" selection-end-line="994" selection-end-column="0" />
+          <folding>
+            <element signature="e#35734#35735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="e#1996#1997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Passwords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="59" column="84" lean-forward="true" selection-start-line="59" selection-start-column="84" selection-end-line="59" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="455" column="44" lean-forward="true" selection-start-line="455" selection-start-column="44" selection-end-line="455" selection-end-column="44" />
+          <folding>
+            <element signature="docComment;class#MySQL_DBManager#0" expanded="false" />
+            <element signature="method#main#0;class#MySQL_DBManager#0" expanded="false" />
+            <element signature="e#5586#5612#0" expanded="false" />
+            <element signature="method#InitializeDB#0;class#MySQL_DBManager#0" expanded="false" />
+            <element signature="method#readComment#0;class#MySQL_DBManager#0" expanded="false" />
+            <element signature="method#readIdea#0;class#MySQL_DBManager#0" expanded="false" />
+            <element signature="method#writeComment#0;class#MySQL_DBManager#0" expanded="false" />
+            <element signature="e#10653#10698#0" expanded="false" />
+            <element signature="e#14719#14764#0" expanded="false" />
+            <element signature="method#writeIdea#0;class#MySQL_DBManager#0" expanded="false" />
+            <element signature="method#updateComment#1;class#MySQL_DBManager#0" expanded="false" />
+            <element signature="method#updateIdea#1;class#MySQL_DBManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="46" column="105" lean-forward="true" selection-start-line="46" selection-start-column="105" selection-end-line="46" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3213">
-          <caret line="351" column="20" lean-forward="false" selection-start-line="351" selection-start-column="20" selection-end-line="351" selection-end-column="20" />
+        <state relative-caret-position="116">
+          <caret line="354" column="55" lean-forward="true" selection-start-line="354" selection-start-column="55" selection-end-line="354" selection-end-column="55" />
           <folding>
             <element signature="docComment;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#360#449#0" expanded="false" />
-            <element signature="e#1007#1075#0" expanded="false" />
+            <element signature="e#413#502#0" expanded="false" />
+            <element signature="e#1060#1128#0" expanded="false" />
+            <element signature="initializer##0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#main#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#6103#6129#0" expanded="false" />
+            <element signature="e#6156#6182#0" expanded="false" />
+            <element signature="method#query#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#readComment#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#readIdea#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#writeComment#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#11259#11304#0" expanded="false" />
+            <element signature="e#11312#11357#0" expanded="false" />
             <element signature="method#writeIdea#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#readVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#writeVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#updateVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#16210#16255#0" expanded="false" />
-            <marker date="1482622689486" expanded="false" signature="169:252" ph="..." />
+            <element signature="method#writeUser#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
+            <element signature="e#17990#18035#0" expanded="false" />
+            <marker date="1482696565205" expanded="false" signature="222:305" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="223">
+          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

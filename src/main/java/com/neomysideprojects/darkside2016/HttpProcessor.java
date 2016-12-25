@@ -66,10 +66,15 @@ public class HttpProcessor extends HttpServlet {
         if(req.getRequestURI().equals("/user")){
             System.out.println("Received query: "+req.toString());
             resp.setContentType("text/html;charset=utf-8");
-            int result = manager.writeUser( manager.extractUser(req.getParameter("user")) );
+            int result = manager.registerUser( req.getParameter("name"), req.getParameter("password") );
             PrintWriter pw = resp.getWriter();
-            pw.println("<p>"+result+"th user was added to the database</p>");
-            System.out.println(result+"th user was added to the database");
+            if(result > 0) {
+                pw.println("SUCCESS");
+                System.out.println(result + " user was added to the database");
+            } else {
+                pw.println(Integer.toString(result));
+                System.out.println("Error: "+result);
+            }
         }
         System.out.println("Input request\nMethod: "+req.getMethod()+"\nAuth type:"+req.getAuthType()+"\nQuery: "+req.getQueryString()+"\nRequest URI: "+req.getRequestURI());
         //super.doPost(req, resp);

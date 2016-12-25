@@ -1,5 +1,6 @@
 package com.neomysideprojects.darkside2016.managers;
 
+import com.neomysideprojects.darkside2016.Passwords;
 import com.neomysideprojects.darkside2016.data.*;
 import com.neomysideprojects.darkside2016.interfaces.DBManager;
 
@@ -388,6 +389,51 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
         return uf;
     }
 
+    public int registerUser(String name, String password) {
+        UserFull uf = null;
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs;
+        int res = -1;
+        try {
+            conn = DriverManager.getConnection(DB_URL);
+            stmt = conn.createStatement();
+
+            rs = stmt.executeQuery("SELECT * FROM dear_user WHERE name='" + name+"'");
+            if (rs.next()) {  // Is there at least one row?
+                System.out.println("Duplicate user name!");
+                return DUPLICATE_USER_NAME;
+            } else {
+                byte[] salt =  Passwords.getNextSalt();
+                res = stmt.executeUpdate("INSERT INTO dear_user(name, passwordHash, passwordSalt) " +
+                        "VALUES('"+name+"', "+Passwords.hash(password.toCharArray(), salt).toString()+","+salt.toString()+")");
+                System.out.println("Successfully registered user "+name+"!");
+            }
+            stmt.close();
+            conn.close();
+        } catch (SQLException se) {
+            //Handle errors for JDBC
+            se.printStackTrace();
+        } catch (Exception e) {
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        } finally {
+            //finally block used to close resources
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException se2) {
+            }// nothing we can do
+            try {
+                if (conn != null)
+                    conn.close();
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return res;
+    }
+
     public int writeUser(User u) {
         Connection conn = null;
         Statement stmt = null;
@@ -400,9 +446,10 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
                 System.out.println("INSERT INTO dear_user(dear_user_id, name) VALUES('" + u.getUser_id() + "','" + u.getName() + "')");
                 res = stmt.executeUpdate("INSERT INTO dear_user(dear_user_id, name) VALUES('" + u.getUser_id() + "','" + u.getName() + "')");
             }
-            else
-                System.out.println("INSERT INTO dear_user(name) VALUES('"+u.getName()+"')");
-                res = stmt.executeUpdate("INSERT INTO dear_user(name) VALUES('"+u.getName()+"')");
+            else {
+                System.out.println("INSERT INTO dear_user(name) VALUES('" + u.getName() + "')");
+                res = stmt.executeUpdate("INSERT INTO dear_user(name) VALUES('" + u.getName() + "')");
+            }
             stmt.close();
             conn.close();
         }catch(SQLException se){

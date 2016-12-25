@@ -79,6 +79,10 @@ public class DataManager implements DBManager, InternetManager {
         return database.writeUser(u);
     }
 
+    public int registerUser(String name, String password) {
+        return database.registerUser(name, password);
+    }
+
     public int updateUser(User u) {
         return database.updateUser(u);
     }

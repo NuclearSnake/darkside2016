@@ -12,6 +12,8 @@ import com.neomysideprojects.darkside2016.data.*;
  * @author Neo
  */
 public interface DBManager {
+    public static final int DUPLICATE_USER_NAME = -124;
+
     IdeaExtended readIdea(int id);
     int writeIdea(Idea i);
     int updateIdea(Idea i);
@@ -26,6 +28,7 @@ public interface DBManager {
     UserFull readUserFull(int user_id);
     int writeUser(User u);
     int writeUser(UserFull u);
+    int registerUser(String name, String password);
     int updateUser(User u);
     int updateUser(UserFull u);
 
