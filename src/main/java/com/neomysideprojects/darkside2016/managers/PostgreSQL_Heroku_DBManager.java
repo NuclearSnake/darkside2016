@@ -399,15 +399,21 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
             conn = DriverManager.getConnection(DB_URL);
             stmt = conn.createStatement();
 
-            rs = stmt.executeQuery("SELECT * FROM dear_user WHERE name='" + name+"'");
+            rs = stmt.executeQuery("SELECT * FROM dear_user WHERE name=\'" + name + "\'");
             if (rs.next()) {  // Is there at least one row?
                 System.out.println("Duplicate user name!");
                 return ERROR_DUPLICATE_USER_NAME;
             } else {
                 byte[] salt =  Passwords.getNextSalt();
-                res = stmt.executeUpdate("INSERT INTO dear_user(name, passwordHash, passwordSalt) " +
-                        "VALUES('"+name+"', "+Passwords.hash(password.toCharArray(), salt).toString()+","+salt.toString()+")");
+                String query = "INSERT INTO dear_user(name, passwordHash, passwordSalt) VALUES(?,?,?)";
+                PreparedStatement statement = conn.prepareStatement(query);
+                statement.setString(1, name);
+                statement.setBytes(2, Passwords.hash(password.toCharArray(), salt));
+                statement.setBytes(3, salt);
+
+                res = statement.executeUpdate();
                 System.out.println("Successfully registered user "+name+"!");
+                statement.close();
             }
             stmt.close();
             conn.close();
