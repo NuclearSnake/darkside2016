@@ -22,8 +22,9 @@ public class Passwords {
 
     private static final Random RANDOM = new SecureRandom();
     private static final int ITERATIONS = 10000;
-    private static final int KEY_LENGTH = 256;
-    private static final int SALT_LENGTH = 256;
+    private static final int KEY_LENGTH = 512;
+    private static final int SALT_LENGTH = KEY_LENGTH/8; // Careful!
+    private static final int TOKEN_LENGTH = 64; // Careful!
 
     /**
      * static utility class
@@ -33,12 +34,29 @@ public class Passwords {
     /**
      * Returns a random salt to be used to hash a password.
      *
-     * @return a 16 bytes random salt
+     * @return a {@link Passwords#SALT_LENGTH} bytes random salt
      */
     public static byte[] getNextSalt() {
-        byte[] salt = new byte[16];
+        byte[] salt = new byte[SALT_LENGTH];
         RANDOM.nextBytes(salt);
         return salt;
+    }
+
+    public static byte[] getNextToken() {
+        byte[] salt = new byte[TOKEN_LENGTH];
+        RANDOM.nextBytes(salt);
+        return salt;
+    }
+
+    public static String byteArrayToString(byte[] array){
+        StringBuilder builder = new StringBuilder("[");
+        for (int i = 0; i < array.length; i++) {
+            builder.append( Byte.toString(array[i]) );
+            if(i != array.length -1)
+                builder.append(", ");
+        }
+        builder.append("]");
+        return builder.toString();
     }
 
     /**

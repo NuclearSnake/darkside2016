@@ -402,7 +402,7 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
             rs = stmt.executeQuery("SELECT * FROM dear_user WHERE name='" + name+"'");
             if (rs.next()) {  // Is there at least one row?
                 System.out.println("Duplicate user name!");
-                return DUPLICATE_USER_NAME;
+                return ERROR_DUPLICATE_USER_NAME;
             } else {
                 byte[] salt =  Passwords.getNextSalt();
                 res = stmt.executeUpdate("INSERT INTO dear_user(name, passwordHash, passwordSalt) " +
@@ -434,6 +434,55 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
         return res;
     }
 
+    public int isExistingUser(String name, String password) {
+        UserFull uf = null;
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs;
+        int result = ERROR_WHILE_PROCESSING_REQUEST;
+        try {
+            conn = DriverManager.getConnection(DB_URL);
+            stmt = conn.createStatement();
+
+            rs = stmt.executeQuery("select * from user where name= \'"+name+"\'");
+            rs.next();
+            if(Passwords.isExpectedPassword(password.toCharArray(),
+                    rs.getBytes("passwordSalt"),
+                    rs.getBytes("passwordHash")))
+                result = 1;
+            else
+                result = 0;
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(stmt!=null)
+                    stmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn!=null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        //System.out.println("Goodbye!");
+        return result;
+    }
+
+    public byte[] loginUser(String name, String password) {
+        if(isExistingUser(name, password) == 1)
+            // TODO Write this to database to check later!
+            return Passwords.getNextToken();
+        else
+            return null;
+    }
     public int writeUser(User u) {
         Connection conn = null;
         Statement stmt = null;

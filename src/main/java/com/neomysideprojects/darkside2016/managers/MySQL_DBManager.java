@@ -433,6 +433,8 @@ public class MySQL_DBManager implements DBManager {
         return 0;
     }
 
+
+
     public int registerUser(String name, String password) {
         UserFull uf = null;
         Connection conn = null;
@@ -443,21 +445,21 @@ public class MySQL_DBManager implements DBManager {
             conn = DriverManager.getConnection(DB_URL+DB_NAME,USER,PASS);
             stmt = conn.createStatement();
 
-            rs = stmt.executeQuery("SELECT * FROM user WHERE name=" + name);
+            rs = stmt.executeQuery("SELECT * FROM user WHERE name=\'" + name + "\'");
             if (rs.next()) {  // Is there at least one row?
                 System.out.println("Duplicate user name!");
-                return DUPLICATE_USER_NAME;
+                return ERROR_DUPLICATE_USER_NAME;
             } else {
                 byte[] salt =  Passwords.getNextSalt();
                 String query = "INSERT INTO user(name, passwordHash, passwordSalt) VALUES(?,?,?)";
-                PreparedStatement statement = (PreparedStatement) conn.prepareStatement(query);
+                PreparedStatement statement = conn.prepareStatement(query);
                 statement.setString(1, name);
                 statement.setBytes(2, Passwords.hash(password.toCharArray(), salt));
                 statement.setBytes(3, salt);
 
-                res = stmt.executeUpdate("INSERT INTO user(name, passwordHash, passwordSalt) " +
-                        "VALUES('"+name+"', "+Passwords.hash(password.toCharArray(), salt).toString()+","+salt.toString()+")");
+                res = statement.executeUpdate();
                 System.out.println("Successfully registered user "+name+"!");
+                statement.close();
             }
             stmt.close();
             conn.close();
@@ -482,6 +484,56 @@ public class MySQL_DBManager implements DBManager {
             }//end finally try
         }//end try
         return res;
+    }
+
+    public int isExistingUser(String name, String password) {
+        UserFull uf = null;
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs;
+        int result = ERROR_WHILE_PROCESSING_REQUEST;
+        try {
+            conn = DriverManager.getConnection(DB_URL+DB_NAME,USER,PASS);
+            stmt = conn.createStatement();
+
+        rs = stmt.executeQuery("select * from user where name= \'"+name+"\'");
+        rs.next();
+        if(Passwords.isExpectedPassword(password.toCharArray(),
+                rs.getBytes("passwordSalt"),
+                rs.getBytes("passwordHash")))
+            result = 1;
+        else
+            result = 0;
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(stmt!=null)
+                    stmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn!=null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        //System.out.println("Goodbye!");
+        return result;
+    }
+
+    public byte[] loginUser(String name, String password) {
+        if(isExistingUser(name, password) == 1)
+            // TODO Write this to database to check later!
+            return Passwords.getNextToken();
+        else
+            return null;
     }
 
     public int updateUser(User u) {

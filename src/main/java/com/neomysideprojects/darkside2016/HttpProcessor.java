@@ -50,6 +50,25 @@ public class HttpProcessor extends HttpServlet {
             return;
         }
 
+        if(req.getRequestURI().equals("/login")){
+            resp.setContentType("text/plain;charset=utf-8");
+            PrintWriter pw = resp.getWriter();
+            // TODO Check if parameter really is of integer type
+            // TODO Check output of database read operation
+            //pw.println("SUCCESS");
+            //pw.println("You successfully logged in. Here is your token:");
+            byte [] token = manager.loginUser(req.getParameter("name"), req.getParameter("password"));
+            String str_token = new String(token, "windows-1251");
+            pw.println( str_token );
+            //pw.println("Have a nice day!");
+            System.out.println("Token given to user "+req.getParameter("name")+"\nToken: "+Passwords.byteArrayToString(str_token.getBytes("windows-1251")).hashCode());
+
+            pw.flush();
+            pw.close();
+            return;
+        }
+
+
         resp.setContentType("text/html;charset=utf-8");
         PrintWriter pw = resp.getWriter();
 
