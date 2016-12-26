@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="399c779d-33f0-4995-9828-b52ed2275b0b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.class" afterPath="$PROJECT_DIR$/target/classes/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Passwords.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Passwords.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/interfaces/DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/interfaces/DBManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/MySQL_DBManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -43,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Darkside2016.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Darkside2016.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
+            <state relative-caret-position="58">
               <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
               <folding />
             </state>
@@ -65,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostgreSQL_Heroku_DBManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PostgreSQL_Heroku_DBManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1921">
-              <caret line="443" column="53" lean-forward="false" selection-start-line="443" selection-start-column="53" selection-end-line="443" selection-end-column="53" />
+            <state relative-caret-position="1554">
+              <caret line="446" column="55" lean-forward="false" selection-start-line="446" selection-start-column="55" selection-end-line="446" selection-end-column="55" />
               <folding>
                 <element signature="docComment;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="e#413#502#0" expanded="false" />
@@ -87,8 +80,8 @@
                 <element signature="method#writeVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#updateVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
                 <element signature="method#writeUser#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-                <element signature="e#19655#19700#0" expanded="false" />
-                <marker date="1482712453219" expanded="false" signature="222:305" ph="..." />
+                <element signature="e#19660#19705#0" expanded="false" />
+                <marker date="1482712615443" expanded="false" signature="222:305" ph="..." />
               </folding>
             </state>
           </provider>
@@ -213,8 +206,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/DataManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Passwords.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/HttpProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java" />
       </list>
     </option>
   </component>
@@ -885,8 +878,8 @@
             <element signature="method#writeVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#updateVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#writeUser#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#19655#19700#0" expanded="false" />
-            <marker date="1482712453219" expanded="false" signature="222:305" ph="..." />
+            <element signature="e#19660#19705#0" expanded="false" />
+            <marker date="1482712615443" expanded="false" signature="222:305" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1318,10 +1311,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/managers/PostgreSQL_Heroku_DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="443" column="53" lean-forward="false" selection-start-line="443" selection-start-column="53" selection-end-line="443" selection-end-column="53" />
+        <state relative-caret-position="1554">
+          <caret line="446" column="55" lean-forward="false" selection-start-line="446" selection-start-column="55" selection-end-line="446" selection-end-column="55" />
           <folding>
             <element signature="docComment;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="e#413#502#0" expanded="false" />
@@ -1339,17 +1340,9 @@
             <element signature="method#writeVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#updateVote#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
             <element signature="method#writeUser#0;class#PostgreSQL_Heroku_DBManager#0" expanded="false" />
-            <element signature="e#19655#19700#0" expanded="false" />
-            <marker date="1482712453219" expanded="false" signature="222:305" ph="..." />
+            <element signature="e#19660#19705#0" expanded="false" />
+            <marker date="1482712615443" expanded="false" signature="222:305" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neomysideprojects/darkside2016/Darkside2016.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>

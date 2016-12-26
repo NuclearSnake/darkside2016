@@ -444,7 +444,7 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
             conn = DriverManager.getConnection(DB_URL);
             stmt = conn.createStatement();
 
-            rs = stmt.executeQuery("select * from user where name= \'"+name+"\'");
+            rs = stmt.executeQuery("select * from dear_user where name= \'"+name+"\'");
             rs.next();
             if(Passwords.isExpectedPassword(password.toCharArray(),
                     rs.getBytes("passwordSalt"),
