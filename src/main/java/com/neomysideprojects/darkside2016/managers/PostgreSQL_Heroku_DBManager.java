@@ -45,6 +45,8 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
             stmt = conn.createStatement();
             String sql;
 
+            sql = "DROP TABLE dear_user";
+            stmt.executeUpdate(sql);
             sql = "CREATE TABLE IF NOT EXISTS category("
                     + "cat_id SERIAL NOT NULL PRIMARY KEY,"
                     + "name VARCHAR(20) NOT NULL"
@@ -53,8 +55,8 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
             sql = "CREATE TABLE IF NOT EXISTS dear_user("
                     + "dear_user_id SERIAL NOT NULL PRIMARY KEY,"
                     + "name VARCHAR(64) NOT NULL,"
-                    + "passwordHash BIT(64),"
-                    + "passwordSalt BIT(64),"
+                    + "passwordHash BYTEA(64),"
+                    + "passwordSalt BYTEA(64),"
                     + "rating INT"
                     + ")";
             stmt.executeUpdate(sql);
