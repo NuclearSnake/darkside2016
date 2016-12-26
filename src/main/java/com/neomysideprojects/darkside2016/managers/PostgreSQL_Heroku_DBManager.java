@@ -45,7 +45,7 @@ public class PostgreSQL_Heroku_DBManager implements DBManager {
             stmt = conn.createStatement();
             String sql;
 
-            sql = "DROP TABLE dear_user";
+            sql = "DROP TABLE dear_user CASCADE";
             stmt.executeUpdate(sql);
             sql = "CREATE TABLE IF NOT EXISTS category("
                     + "cat_id SERIAL NOT NULL PRIMARY KEY,"
